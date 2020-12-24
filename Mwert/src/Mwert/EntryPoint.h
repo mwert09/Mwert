@@ -6,7 +6,11 @@ extern Mwert::Application* Mwert::CreateApplication();
 
 void main(int argc, char** argv)
 {
-	printf("Mwert Engine\n");
+	Mwert::Log::Init();
+	MW_CORE_WARN("Initialized Log!");
+	int a = 5;
+	MW_INFO("Hello Var = {0}", a);
+	
 	auto app = Mwert::CreateApplication();
 	app->Run();
 	delete app;
