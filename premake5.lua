@@ -10,6 +10,12 @@ workspace "Mwert"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Mwert/vendor/GLFW/include"
+
+include "Mwert/vendor/GLFW"
+
 project "Mwert"
 	location "Mwert"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Mwert"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "mwpch.h"
+	pchsource "Mwert/src/mwpch.cpp"
 
 	files
 	{
@@ -27,7 +36,14 @@ project "Mwert"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"

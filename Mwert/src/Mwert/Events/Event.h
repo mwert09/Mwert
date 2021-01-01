@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Mwert/Core.h"
-
 #include <string>
 #include <functional>
+
 
 namespace Mwert
 {

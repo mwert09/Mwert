@@ -7,6 +7,12 @@
     <Filter Include="Mwert\Events">
       <UniqueIdentifier>{38D2CD60-2435-5D05-CDBA-95BBB9FC2888}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Mwert.h" />
@@ -34,6 +40,13 @@
     <ClInclude Include="src\Mwert\Log.h">
       <Filter>Mwert</Filter>
     </ClInclude>
+    <ClInclude Include="src\Mwert\Window.h">
+      <Filter>Mwert</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mwpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Mwert\Application.cpp">
@@ -42,5 +55,9 @@
     <ClCompile Include="src\Mwert\Log.cpp">
       <Filter>Mwert</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mwpch.cpp" />
   </ItemGroup>
 </Project>

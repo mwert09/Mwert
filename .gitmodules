@@ -1,3 +1,6 @@
 [submodule "Mwert/vendor/spdlog"]
 	path = Mwert/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Mwert/vendor/GLFW"]
+	path = Mwert/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

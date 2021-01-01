@@ -1,3 +1,4 @@
+#include "mwpch.h"
 #include "Log.h"
 
 namespace Mwert

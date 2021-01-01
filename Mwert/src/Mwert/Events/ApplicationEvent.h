@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Mwert
 {
 	class MWERT_API WindowResizeEvent : public Event
